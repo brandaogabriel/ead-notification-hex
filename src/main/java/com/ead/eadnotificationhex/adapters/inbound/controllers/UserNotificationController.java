@@ -37,7 +37,7 @@ public class UserNotificationController {
                                                                               Authentication authentication) {
         PageInfo pageInfo = new PageInfo();
         pageInfo.setPageNumber(pageable.getPageNumber());
-        pageInfo.setPageSize(pageInfo.getPageSize());
+        pageInfo.setPageSize(pageable.getPageSize());
         List<NotificationDomain> notificationDomainList = notificationServicePort.findAllNotificationByUser(userId, pageInfo);
         return ResponseEntity.status(HttpStatus.OK).body(new PageImpl<>(notificationDomainList, pageable, notificationDomainList.size()));
     }

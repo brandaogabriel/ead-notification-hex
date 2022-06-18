@@ -28,6 +28,10 @@ public class NotificationDomain {
         return id;
     }
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
     public UUID getUserId() {
         return userId;
     }
